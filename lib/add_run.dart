@@ -105,7 +105,7 @@ class AddRunState extends State<AddRun> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Start Date',
+                        'Date',
                         style: Theme.of(context).textTheme.bodyLarge,),
                       Text('${date.month}-${date.day}-${date.year}',
                         style: Theme.of(context).textTheme.bodyLarge,),

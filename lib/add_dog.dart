@@ -25,9 +25,9 @@ class AddDogState extends State<AddDog> {
   FirebaseStorage storage = FirebaseStorage.instance;
   Auth auth = Auth();
 
-  String? name;
+  String name = 'dog';
   DateTime birthdate = DateTime(2023,01,01);
-  String? breed;
+  //String? breed;
   DateTime startdate = DateTime(2023,01,01);
 
   List<String> breeds = [];
@@ -282,6 +282,8 @@ class AddDogState extends State<AddDog> {
     DocumentReference userDoc = firestore.collection('users').doc(userId);
 
     String? path = imageFile?.path;
+    path ??= 'none';
+
     Map<String, dynamic> dogData = {
       'name': name,
       'birthdate': birthdate,
