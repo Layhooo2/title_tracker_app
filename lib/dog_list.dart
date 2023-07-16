@@ -33,7 +33,6 @@ class DogList extends StatelessWidget {
       //print('Not there');
       Map<String, dynamic> data = {
         'email': auth.getUserEmail(),
-        // Add more fields as needed
       };
       await collection.doc(userId).set(data);
     }
@@ -86,10 +85,10 @@ class DogList extends StatelessWidget {
                               child: GridView.builder(
                                 gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2, // Set the number of columns here
+                                  crossAxisCount: 2,
                                   crossAxisSpacing:
-                                  10.0, // Set the spacing between columns
-                                  mainAxisSpacing: 10.0, // Set the spacing between rows
+                                  10.0,
+                                  mainAxisSpacing: 10.0,
                                 ),
                                 scrollDirection: Axis.vertical,
                                 shrinkWrap: true,

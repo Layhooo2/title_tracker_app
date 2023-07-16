@@ -103,8 +103,19 @@ class AddDogState extends State<AddDog> {
                   ),
                   Container(
                     margin: const EdgeInsets.all(10),
-                    color: Theme.of(context).colorScheme.secondaryContainer,
-                    child: breedDrop()
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Theme.of(context).colorScheme.secondary),
+                      borderRadius: BorderRadius.circular(5),
+                      color: Theme.of(context).colorScheme.secondaryContainer,
+                    ),
+                    //color: Theme.of(context).colorScheme.secondaryContainer,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [Text('Breed:'),
+                        breedDrop()],
+                    )
                   ),
                   Container(
                     margin: const EdgeInsets.all(10),

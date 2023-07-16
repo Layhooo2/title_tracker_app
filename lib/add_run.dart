@@ -233,7 +233,7 @@ class AddRunState extends State<AddRun> {
 
   Future<void> getCurrentWeather() async {
     while (lat == 0) {
-      await Future.delayed(const Duration(milliseconds: 100)); // Wait for 100 milliseconds
+      await Future.delayed(const Duration(milliseconds: 100));
     }
     String apiKey = '5ff2939855904c8aa7e44538231507';
     String url = 'https://api.weatherapi.com/v1/current.json?key=$apiKey&q=$lat,$lon&aqi=no';

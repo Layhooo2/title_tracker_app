@@ -134,33 +134,36 @@ class DogProfile extends StatelessWidget {
 
 
 
-                      TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      AddTitle(dogId: dogId)));
+                      Container(
+                        margin: const EdgeInsets.all(10),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        AddTitle(dogId: dogId)));
 
-                          print('Title added');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor:
+                            print('Title added');
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
                               Theme.of(context).colorScheme.primaryContainer,
-                          foregroundColor:
+                              foregroundColor:
                               Theme.of(context).colorScheme.secondary,
-                          textStyle: Theme.of(context).textTheme.titleLarge,
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 12, horizontal: 24),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                              textStyle: Theme.of(context).textTheme.titleLarge,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 12, horizontal: 24),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              //elevation: 15,
+                              shadowColor: Colors.black54
                           ),
-                          //elevation: 15,
-                          shadowColor: Colors.black54
-                        ),
-                        child: const Text(
-                          'Add Title',
-                          //style: Theme.of(context).textTheme.bodyLarge,
+                          child: const Text(
+                            'Add Title',
+                            //style: Theme.of(context).textTheme.bodyLarge,
+                          ),
                         ),
                       )
                     ],
